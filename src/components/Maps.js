@@ -2,7 +2,7 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react'
 
 
-export const Maps = ({center, zoom}) => {
+export default function Maps ({center, zoom}) {
     return (
         <div className="map">
             <GoogleMapReact
