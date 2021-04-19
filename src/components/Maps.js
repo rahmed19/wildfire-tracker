@@ -10,7 +10,6 @@ export default function Maps ({center, zoom}) {
                 defaultCenter={center}
                 defaultZoom={zoom}
             >
-
             </GoogleMapReact>
         </div>
     )
