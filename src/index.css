@@ -4,6 +4,26 @@ body {
   background-color: transparent;
   margin: 0;
   font-family: Roboto;
+  overflow: hidden;
+}
+
+.header {
+  padding: 10px;
+  background-color: firebrick;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
 }
 
 .map {
@@ -34,8 +54,9 @@ body {
 }
 
 .location-info{
+  /* display: none; */
   position: absolute;
-  top: 50px;
+  top: 100px;
   right: 50px;
   width: 400px;
   min-height: 200px;
@@ -57,3 +78,4 @@ body {
   padding: 5px 0;
 
 }
+

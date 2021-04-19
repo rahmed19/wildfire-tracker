@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Header from './components/Header'
 import Loader from './components/Loader'
 import Map from './components/Map'
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {!loading ? <Map eventData={eventData} /> : <Loader />}
     </div>
   );
