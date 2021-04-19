@@ -26,6 +26,7 @@ function App() {
     <div className="App">
       <Header />
       {!loading ? <Map eventData={eventData} /> : <Loader />}
+
     </div>
   );
 }
