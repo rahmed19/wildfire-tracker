@@ -4,14 +4,14 @@ import LocationMarker from './LocationMarker'
 import LocationInfoBox from './LocationInfoBox'
 
 
-export default function Map({ eventData, center, zoom, eventCategory }) {
+export default function Map({ eventData, eventCategory }) {
 
     const [locationInfo, setLocationInfo] = useState(null)
     const [centerProperty, setCenterProperty] = useState({ lat: 43.246292, lng: -97.1384 })
 
     useEffect(() => {
         if (eventCategory === "volcanoes") {
-            setCenterProperty({ lat: 0.7893, lng: -113.9213 })
+            setCenterProperty({ lat: 1.48, lng: 127.63 })
         } else {
             setCenterProperty({ lat: 43.246292, lng: -97.1384 })
         }
@@ -49,9 +49,9 @@ export default function Map({ eventData, center, zoom, eventCategory }) {
         <div className="map">
             <GoogleMapReact
                 bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
-                defaultCenter={center}
+                defaultCenter={{ lat: 43.246292, lng: -97.1384 }}
                 center={centerProperty}
-                defaultZoom={zoom}
+                defaultZoom={5}
                 onClick={() => setLocationInfo(null)}
             >
                 {markers}
@@ -61,13 +61,4 @@ export default function Map({ eventData, center, zoom, eventCategory }) {
         </div>
     )
 
-}
-
-
-Map.defaultProps = {
-    center: {
-        lat: 43.246292,
-        lng: -97.1384
-    },
-    zoom: 5
 }
