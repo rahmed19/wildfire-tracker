@@ -7,6 +7,8 @@ export default function LocationInfoBox({ info }) {
             <ul>
                 <li>ID: <strong>{info.id}</strong></li>
                 <li>TITLE: <strong>{info.title}</strong></li>
+                <li>LATITUDE: <strong>{info.lat}</strong></li>
+                <li>LONGTITUDE: <strong>{info.lng}</strong></li>
             </ul>
         </div>
     )
