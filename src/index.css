@@ -78,9 +78,9 @@ body {
   cursor: pointer;
 }
 
-.footer-info {
+/* .footer-info {
   position: absolute;
-  top: -600%;
+  top: -300px;
   right: 50px;
   width: 400px;
   min-height: 200px;
@@ -91,6 +91,32 @@ body {
   color: white;
   z-index: -100;
 }
+
+.footer-info h2{
+  text-align: left;
+}
+
+.footer-info p {
+  text-align: left;
+  font-size: 15px;
+}
+
+.footer-info p:hover {
+  color: white;
+}
+
+.footer-info ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.footer-info li {
+  text-align: left;
+  padding: 5px 0;
+
+} */
 
 .map {
   width: 100vw;
@@ -145,5 +171,43 @@ body {
 
 }
 
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -101;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal-box {
+  position: relative;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 30%;
+  width: 40%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.7);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  z-index: -100;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.modal-content{
+  color: white;
+}
 
 
