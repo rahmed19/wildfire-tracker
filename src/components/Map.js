@@ -27,6 +27,7 @@ export default function Map({ eventData, eventCategory }) {
             if (ev.geometry[0].coordinates.length === 2) {
 
                 return <LocationMarker
+                    eventCategory={eventCategory}
                     lat={ev.geometry[0].coordinates[1]}
                     lng={ev.geometry[0].coordinates[0]}
                     onClick={() =>
