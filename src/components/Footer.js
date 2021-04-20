@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-flex-container">
                 <div className="footer-column">
-                    <h3 onClick={() => setshowInfo(true)}>Learn more about this demo ReactJS project.</h3>
+                    <h3 onClick={() => setshowInfo((prevState) => !prevState)}>Learn more about this demo ReactJS project.</h3>
                     {showInfo && <FooterInfoBox showInfo={showInfo} setShowInfo={setshowInfo} />}
                 </div>
             </div>
