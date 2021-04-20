@@ -26,12 +26,18 @@ body {
 
 }
 
-.header h3{
+.header h3 {
   font-size: 15px;
   padding: 0;
   margin: 0;
   text-align: right;
+  
 }
+/* 
+.header h3 :hover {
+  font-weight: 300;
+  
+} */
 
 .wrapper{
   width: 100%;

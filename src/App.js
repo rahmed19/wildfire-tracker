@@ -6,6 +6,7 @@ import Map from './components/Map'
 function App() {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
+  const [eventCategory, setEventCategory] = useState("wildfires")
 
   useEffect(() => {
     async function fetchEvents() {
@@ -24,8 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      {!loading ? <Map eventData={eventData} /> : <Loader />}
+      <Header setEventCategory={setEventCategory} eventCategory={eventCategory} />
+      {!loading ? <Map eventData={eventData} eventCategory={eventCategory} /> : <Loader />}
 
     </div>
   );
