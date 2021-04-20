@@ -11,19 +11,26 @@ export default function Map({ eventData, center, zoom }) {
 
     const markers = eventData.map(ev => {
 
-        if (ev.categories[0].id === "wildfires") {
-            return <LocationMarker
-                lat={ev.geometry[0].coordinates[1]}
-                lng={ev.geometry[0].coordinates[0]}
-                onClick={() =>
-                    setLocationInfo({
-                        id: ev.id,
-                        title: ev.title,
-                        lat: ev.geometry[0].coordinates[1],
-                        lng: ev.geometry[0].coordinates[0]
-                    })}
 
-            />
+        if (ev.categories[0].id === "volcanoes") {
+            if (ev.geometry[0].coordinates.length === 2) {
+                // console.log(ev.geometry[0].coordinates.length)
+                return <LocationMarker
+                    lat={ev.geometry[0].coordinates[1]}
+                    lng={ev.geometry[0].coordinates[0]}
+                    onClick={() =>
+                        setLocationInfo({
+                            id: ev.id,
+                            title: ev.title,
+                            lat: ev.geometry[0].coordinates[1],
+                            lng: ev.geometry[0].coordinates[0]
+                        })}
+
+                />
+            }
+
+            // console.log(ev.geometry[0].coordinates.length)
+
         }
 
 
