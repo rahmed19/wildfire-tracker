@@ -22,8 +22,31 @@ body {
   font-size: 25px;
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: left;
 
+}
+
+.header h3{
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  vertical-align: middle;
 }
 
 .map {

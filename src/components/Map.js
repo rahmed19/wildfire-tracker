@@ -10,11 +10,9 @@ export default function Map({ eventData, center, zoom }) {
     const [eventCategory, setEventCategory] = useState("wildfires")
 
     const markers = eventData.map(ev => {
-
-
         if (ev.categories[0].id === eventCategory) {
             if (ev.geometry[0].coordinates.length === 2) {
-                // console.log(ev.geometry[0].coordinates.length)
+
                 return <LocationMarker
                     lat={ev.geometry[0].coordinates[1]}
                     lng={ev.geometry[0].coordinates[0]}
