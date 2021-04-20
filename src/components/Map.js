@@ -52,10 +52,8 @@ export default function Map({ eventData, eventCategory }) {
                 bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
                 defaultCenter={{ lat: 43.246292, lng: -97.1384 }}
                 center={centerProperty}
-                defaultZoom={5}
-                zoom={5}
+                defaultZoom={4}
                 onClick={() => setLocationInfo(null)}
-                onChange={() => console.log("changed")}
             >
                 {markers}
 

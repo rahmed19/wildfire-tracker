@@ -17,7 +17,7 @@ export default function Header({ setEventCategory, eventCategory }) {
                     </div>
                     <div className="column">
                         <h3 onClick={() => handleChange()}>
-                            {eventCategory === "volcanoes" ? "Switch to Wildfires tracker" : "Switch to Volcano tracker"}
+                            {eventCategory === "volcanoes" ? "Switch to Wildfires tracker" : "Switch to Volcanoes tracker"}
                         </h3>
                     </div>
                 </div>

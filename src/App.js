@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Loader from './components/Loader'
 import Map from './components/Map'
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Header setEventCategory={setEventCategory} eventCategory={eventCategory} />
       {!loading ? <Map eventData={eventData} eventCategory={eventCategory} /> : <Loader />}
+      {!loading ? <Footer /> : null}
 
     </div>
   );
