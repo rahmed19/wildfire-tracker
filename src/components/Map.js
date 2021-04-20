@@ -17,8 +17,6 @@ export default function Map({ eventData, eventCategory }) {
         }
     }, [eventCategory])
 
-    // let center = centerProperty
-    // let zoom = 5
 
 
 
@@ -58,7 +56,7 @@ export default function Map({ eventData, eventCategory }) {
                 {markers}
 
             </GoogleMapReact>
-            {locationInfo && <LocationInfoBox info={locationInfo} />}
+            {locationInfo && <LocationInfoBox info={locationInfo} setLocationInfo={setLocationInfo} />}
         </div>
     )
 

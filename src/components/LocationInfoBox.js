@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function LocationInfoBox({ info }) {
+export default function LocationInfoBox({ info, setLocationInfo }) {
     return (
-        <div id="location" className="location-info">
+        <div className="location-info" onClick={() => setLocationInfo(null)}>
             <h2>Event Location Info</h2>
             <ul>
                 <li>ID: <strong>{info.id}</strong></li>
