@@ -31,7 +31,7 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                                     <li>useState()</li>
                                     <li>useEffect()</li>
                                     <li>&lt;GoogleMapReact /&gt;</li>
-                                    <li>Iconify pbrary</li>
+                                    <li>Iconify Library</li>
                                     <li>Framer Motion</li>
                                 </ul>
                             </div>
@@ -39,11 +39,11 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                             <div className="div-flexer">
                                 <h3>Additions to base project:</h3>
                                 <ul>
-                                    <li>useState()</li>
-                                    <li>useEffect()</li>
-                                    <li>&lt;GoogleMapReact /&gt;</li>
-                                    <li>Iconify pbrary</li>
-                                    <li>Framer Motion</li>
+                                    <li>Switch between wildfires/volcanoes</li>
+                                    <li>Marker icon switch with category change</li>
+                                    <li>Dynamic rendering of default coordinates</li>
+                                    <li>Footer & project info modal</li>
+                                    <li>Framer animation to event & modal  </li>
                                 </ul>
                             </div>
                         </div>

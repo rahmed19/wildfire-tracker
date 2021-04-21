@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 body {
   background-color: transparent;
   margin: 0;
-  font-family: Roboto;
+  font-family: Raleway;
   overflow: hidden;
 }
 
@@ -116,8 +117,6 @@ body {
   border-radius: 10px;
   font-size: 18px;
   color: white;
-  
-
 }
 
 .location-info ul {
@@ -152,14 +151,15 @@ body {
 
 .modal-box {
   position: relative;
-  color: black;
+  color: #4e4e4e;
+  font-size: 17px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 50%;
-  width: 50%;
+  width: 70%;
   overflow: hidden;
-  background-color: white;
+  background-color: #f3efef;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   z-index: -100;
   padding: 0px;
@@ -187,18 +187,18 @@ body {
 .modal-content{
   text-align: left;
   padding: 10px;
-  color: black;
+  color: inherit;
   width: 100%;
 }
 
-.modal-content h1{
+.modal-content h1, h3{
   text-align: center;
 }
 
 .modal-content p{
   text-align: left;
-  font-size: 15px;
-  font-weight: 400;
+  /* font-size: 15px;
+  font-weight: 400; */
 }
 
 .modal-content h4{
@@ -212,21 +212,33 @@ body {
   color: inherit;
 }
 
-.modal-wrapper ul{
+/* .modal-wrapper ul{
   list-style-type: "✅";
   padding: 0 0 0 30px;
-} 
+}  */
 
-.modal-wrapper ul li {
+/* .modal-wrapper ul li {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 450;
   padding: 0 0 0 5px;
-}
+} */
 
 
 .divs-flexer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  
+} 
+
+.divs-flexer ul{
+  
+  padding: 0 0 0 30px;
+} 
+
+.divs-flexer ul li {
+  list-style-type:inherit;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 0 0 5px;
 }
 
 .div-flexer {
@@ -235,6 +247,7 @@ body {
   border-width: 1px;
   text-align: left;
   border-color: rgba(109, 88, 88, 0.3);
+
 }
 
 .div-flexer h3 {
