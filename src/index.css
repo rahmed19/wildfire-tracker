@@ -157,7 +157,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 50%;
-  width: 60%;
+  width: 50%;
   overflow: hidden;
   background-color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
@@ -184,27 +184,43 @@ body {
   object-position: center;
 }
 
+.modal-border{
+  border: firebrick;
+  margin: 15px;
+  border-style: solid;
+  border-width: 5px;
+}
+
 .modal-content{
-  color: white;
+  padding: 10px;
+  color: black;
+  width: 100%;
 }
 
 .modal-close {
-  color: black;
   position: absolute;
-  right: 3px;
-  top: 0px;
-  width: 3rem;
-  height: 3rem;
-  font-size: .875rem;
-  font-weight: 500;
-  border-radius: 100%;
-  background-color: #837f7f;
-  z-index: 4;
-  color: #fff;
-  line-height: 3rem;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.modal-close:hover {
+  opacity: 1;
+}
+.modal-close:before, .modal-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.modal-close:before {
+  transform: rotate(45deg);
+}
+.modal-close:after {
+  transform: rotate(-45deg);
 }
 
 

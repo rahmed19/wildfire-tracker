@@ -4,19 +4,30 @@ import { motion } from 'framer-motion'
 export default function FooterInfoBox({ showInfo, setShowInfo }) {
     console.log("hello from footer info")
     return (
-        <div className="modal-wrapper" >
-            <div className="modal-backdrop" />
-            <div className="modal-box">
-                <div className="modal-image">
-                    <img src={process.env.REACT_APP_IMG} />
-                </div>
-                <div className="modal-content">
-                    <h2>Project Information</h2>
-                    <p className="modal-close" onClick={() => setShowInfo(false)}>X</p>
-                </div>
+        <>
+            <motion.div className="modal-backdrop"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+            />
+            <motion.div className="modal-wrapper"
+                initial={{ y: "100vh" }}
+                animate={{ y: "0" }}>
 
-            </div>
-        </div >
+                <div className="modal-box">
+                    <div className="modal-image">
+                        <img src={process.env.REACT_APP_IMG} />
+                    </div>
+                    <div className="modal-content modal-border">
+                        <h2>Project Informationdsfdfdf</h2>
+                        <a href="#" className="modal-close" onClick={() => setShowInfo(false)} />
+                    </div>
+
+
+
+
+                </div>
+            </motion.div >
+        </>
     )
 }
 
