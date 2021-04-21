@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
 import locationIcon from '@iconify/icons-mdi/globe'
+import { motion } from 'framer-motion'
 
 export default function Header({ setEventCategory, eventCategory }) {
 
@@ -15,11 +16,11 @@ export default function Header({ setEventCategory, eventCategory }) {
                     <div className="column">
                         <h1><Icon icon={locationIcon} /> &nbsp;
                             {eventCategory.charAt(0).toUpperCase() + eventCategory.slice(1) + " "}
-                            Events Tracker (Powered by ReactJS & NASA open API)</h1>
+                            Event Tracker (Powered by ReactJS & NASA open API)</h1>
                     </div>
                     <div className="column">
                         <h3 onClick={() => handleChange()}>
-                            {eventCategory === "volcanoes" ? "Switch to Wildfires tracker" : "Switch to Volcanoes tracker"}
+                            {eventCategory === "volcanoes" ? "Switch to wildfires tracker" : "Switch to volcanoes tracker"}
                         </h3>
                     </div>
                 </div>
