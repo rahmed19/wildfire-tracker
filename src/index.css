@@ -74,7 +74,7 @@ body {
   text-align: center;
 }
 
-.footer h3:hover{
+.footer-h3:hover{
   cursor: pointer;
 }
 
@@ -212,28 +212,36 @@ body {
   color: inherit;
 }
 
-ol {
-  list-style: none;
-  counter-reset: steps;
+.modal-wrapper ul{
+  list-style-type: "✅";
+  padding: 0 0 0 30px;
+} 
+
+.modal-wrapper ul li {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 0 0 5px;
 }
-ol li {
-  counter-increment: steps;
+
+
+.divs-flexer {
+  display: flex;
+  flex-direction: row;
 }
-ol li::before {
-  content: counter(steps);
-  margin-right: 0.5rem;
-  background: #ff6f00;
-  color: white;
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 50%;
-  display: inline-grid;
-  place-items: center;
-  line-height: 1.2em;
+
+.div-flexer {
+  width: 50%;
+  border-style: solid;
+  border-width: 1px;
+  text-align: left;
+  border-color: rgba(109, 88, 88, 0.3);
 }
-ol ol li::before {
-  background: darkorchid;
+
+.div-flexer h3 {
+  padding: 0 0 0 10px;
 }
+
+
 
 .modal-border{
   border: firebrick;

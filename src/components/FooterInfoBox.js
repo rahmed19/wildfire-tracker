@@ -21,19 +21,32 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                         <h3>This demo ReactJS project was built largely based on&nbsp;
                         <a href="https://www.youtube.com/watch?v=ontX4zfVqK8" target="new">
                                 this Youtube tutorial.</a></h3>
-                        <a href="#" className="modal-close" onCpck={() => setShowInfo(false)} />
+                        <a href="#" className="modal-close" onClick={() => setShowInfo(false)} />
 
 
+                        <div className="divs-flexer">
+                            <div className="div-flexer">
+                                <h3>ReactJS technologies used include:</h3>
+                                <ul>
+                                    <li>useState()</li>
+                                    <li>useEffect()</li>
+                                    <li>&lt;GoogleMapReact /&gt;</li>
+                                    <li>Iconify pbrary</li>
+                                    <li>Framer Motion</li>
+                                </ul>
+                            </div>
 
-                        <h3>ReactJS technologies used include:</h3>
-                        <ol>
-                            <li>useState()</li>
-                            <li>useEffect()</li>
-                            <li>&lt;GoogleMapReact /&gt;</li>
-                            <li>Iconify pbrary</li>
-                            <li>Framer Motion</li>
-                        </ol>
-
+                            <div className="div-flexer">
+                                <h3>Additions to base project:</h3>
+                                <ul>
+                                    <li>useState()</li>
+                                    <li>useEffect()</li>
+                                    <li>&lt;GoogleMapReact /&gt;</li>
+                                    <li>Iconify pbrary</li>
+                                    <li>Framer Motion</li>
+                                </ul>
+                            </div>
+                        </div>
 
 
                     </div>
