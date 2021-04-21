@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function FooterInfoBox({ showInfo, setShowInfo }) {
-    console.log("hello from footer info")
     return (
         <>
             <motion.div className="modal-backdrop"
@@ -18,8 +17,25 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                         <img src={process.env.REACT_APP_IMG} />
                     </div>
                     <div className="modal-content modal-border">
-                        <h2>Project Informationdsfdfdf</h2>
-                        <a href="#" className="modal-close" onClick={() => setShowInfo(false)} />
+                        <h1>Project Information</h1>
+                        <h3>This demo ReactJS project was built largely based on&nbsp;
+                        <a href="https://www.youtube.com/watch?v=ontX4zfVqK8" target="new">
+                                this Youtube tutorial.</a></h3>
+                        <a href="#" className="modal-close" onCpck={() => setShowInfo(false)} />
+
+
+
+                        <h3>ReactJS technologies used include:</h3>
+                        <ol>
+                            <li>useState()</li>
+                            <li>useEffect()</li>
+                            <li>&lt;GoogleMapReact /&gt;</li>
+                            <li>Iconify pbrary</li>
+                            <li>Framer Motion</li>
+                        </ol>
+
+
+
                     </div>
 
 

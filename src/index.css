@@ -184,6 +184,57 @@ body {
   object-position: center;
 }
 
+.modal-content{
+  text-align: left;
+  padding: 10px;
+  color: black;
+  width: 100%;
+}
+
+.modal-content h1{
+  text-align: center;
+}
+
+.modal-content p{
+  text-align: left;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.modal-content h4{
+  color: inherit;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+
+.modal-content a{
+  color: inherit;
+}
+
+ol {
+  list-style: none;
+  counter-reset: steps;
+}
+ol li {
+  counter-increment: steps;
+}
+ol li::before {
+  content: counter(steps);
+  margin-right: 0.5rem;
+  background: #ff6f00;
+  color: white;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+}
+ol ol li::before {
+  background: darkorchid;
+}
+
 .modal-border{
   border: firebrick;
   margin: 15px;
@@ -191,10 +242,9 @@ body {
   border-width: 5px;
 }
 
-.modal-content{
-  padding: 10px;
-  color: black;
-  width: 100%;
+.content-row{
+  display: flex;
+  flex-direction: row;
 }
 
 .modal-close {
