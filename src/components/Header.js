@@ -13,7 +13,9 @@ export default function Header({ setEventCategory, eventCategory }) {
             <div className="wrapper">
                 <div className="flex-container">
                     <div className="column">
-                        <h1><Icon icon={locationIcon} /> Global Events Tracker (Powered by ReactJS & NASA open API)</h1>
+                        <h1><Icon icon={locationIcon} /> &nbsp;
+                            {eventCategory.charAt(0).toUpperCase() + eventCategory.slice(1) + " "}
+                            Events Tracker (Powered by ReactJS & NASA open API)</h1>
                     </div>
                     <div className="column">
                         <h3 onClick={() => handleChange()}>

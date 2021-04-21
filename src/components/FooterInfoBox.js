@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function FooterInfoBox({ showInfo, setShowInfo }) {
     console.log("hello from footer info")
     return (
         <div className="modal-wrapper" onClick={() => setShowInfo(false)}>
             <div className="modal-backdrop" />
-            <div className="modal-box">
+            <motion.div className="modal-box"
+                animate={{}}>
                 <div className="modal-content">
                     <h2>Project Information</h2>
                     <p>
@@ -15,7 +17,7 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                 </a>
                     </p>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </div >
     )
 }
