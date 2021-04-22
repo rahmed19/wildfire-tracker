@@ -130,7 +130,7 @@ body {
 
 }
 
-.modal-wrapper {
+/* .modal-wrapper {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -199,7 +199,7 @@ body {
   text-align: left;
   /* font-size: 15px;
   font-weight: 400; */
-}
+/* }
 
 .modal-content h4{
   color: inherit;
@@ -210,7 +210,7 @@ body {
 
 .modal-content a{
   color: inherit;
-}
+} */
 
 /* .modal-wrapper ul{
   list-style-type: "✅";
@@ -224,7 +224,7 @@ body {
 } */
 
 
-.divs-flexer {
+/* .divs-flexer {
   display: flex;
   flex-direction: row;  
 } 
@@ -292,6 +292,6 @@ body {
 }
 .modal-close:after {
   transform: rotate(-45deg);
-}
+} */
 
 
