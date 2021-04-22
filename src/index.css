@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  padding: 10px;
+  padding: .4vw;
   background-color: firebrick;
   color: white;
   position: fixed;
@@ -20,7 +20,7 @@ body {
 }
 
 .header h1 {
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 0;
   margin: 0;
   text-align: left;
@@ -28,7 +28,7 @@ body {
 }
 
 .header h3 {
-  font-size: 15px;
+  font-size: -2 rem;
   padding: 0;
   margin: 0;
   text-align: right;
@@ -47,8 +47,26 @@ body {
   justify-content: space-between;
 }
 
+
+
 .column {
   vertical-align: middle;
+}
+
+@media(max-width: 1000px){
+  .flex-container {
+    flex-direction: column;
+  }
+  .column {
+    align-items: center;
+    padding: .2vh;
+  }
+  .header h1 {
+    font-size: 1rem;
+  }
+  .header h3 {
+    font-size: .8rem;
+  }
 }
 
 .footer {
