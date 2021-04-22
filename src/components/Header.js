@@ -16,12 +16,15 @@ export default function Header({ setEventCategory, eventCategory }) {
                     <div className="column">
                         <h1><Icon icon={locationIcon} /> &nbsp;
                             {eventCategory.charAt(0).toUpperCase() + eventCategory.slice(1) + " "}
-                            Event Tracker (Powered by ReactJS & NASA open API)</h1>
+                            Event Tracker</h1>
                     </div>
                     <div className="column">
-                        <h3 onClick={() => handleChange()}>
+                        <h1 className="a" onClick={() => handleChange()}>
                             {eventCategory === "volcanoes" ? "Switch to wildfires tracker" : "Switch to volcanoes tracker"}
-                        </h3>
+                        </h1>
+                    </div>
+                    <div className="column">
+                        <h1>(Powered by ReactJS & NASA open API)</h1>
                     </div>
                 </div>
             </div>
