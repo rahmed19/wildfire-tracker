@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function LocationInfoBox({ info, setLocationInfo }) {
-    console.log(info)
+
     return (
         <motion.div className="location-info" onClick={() => setLocationInfo(null)}
             animate={{ x: -40 }}

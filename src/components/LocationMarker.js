@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Icon } from '@iconify/react'
 import locationIconWildfire from '@iconify/icons-mdi/fire-alert'
 import locationIconVolcano from '@iconify/icons-mdi/mountain'
 
 export default function LocationMarker({ lat, lng, onClick, eventCategory }) {
+    const divListener = document.getElementById('icon')
+    useState(() => {
+
+        if (divListener !== null) {
+            divListener.addEventListener(onclick, (console.log('mousedown')))
+        }
+
+    }, [eventCategory])
 
     return (
-        <div className="location-marker" onKeyPress={() => onClick()} onClick={() => onClick()} >
+        <div id="icon" className="location-marker" onClick={() => onClick()} >
             {eventCategory === "wildfires" ?
-                <Icon onMouseDown={() => onClick()} icon={locationIconWildfire} className="location-icon" /> :
-                <Icon onClick={() => onClick()} icon={locationIconVolcano} className="location-icon" />}
+                <Icon icon={locationIconWildfire} className="location-icon" /> :
+                <Icon icon={locationIconVolcano} className="location-icon" />}
         </div>
     )
 }

@@ -49,7 +49,7 @@ export default function Map({ eventData, eventCategory }) {
     return (
         <div className="map">
             <GoogleMapReact
-                bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
+                bootstrapURLKeys={{ key: 'AIzaSyDnKkTgfkeQnSJX9OzuL6bkZJE6RQ6Xe6k' }}
                 defaultCenter={{ lat: 43.246292, lng: -97.1384 }}
                 center={centerProperty}
                 defaultZoom={4}
