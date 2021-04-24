@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import modal from '../images/modal4.jpg'
+import modal from '../images/modal3.jpg'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
+
 
 const Container = styled.div`
     display: flex;
@@ -31,39 +32,80 @@ const Background = styled.div`
     z-index: -100;
 `
 const ModalWrapper = styled.div`
-    width: 800px;
-    height: 500px;
+    // width: 800px;
+    // height: 600px;
+    width: 95vw;
+    max-width: calc(100% - 600px);
+    height: 90vh;
+    max-height: calc(100% - 300px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     background: white;
     color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 200px); 
     position: relative;
     z-index: -100;
     border-radius: 10px;
     z-index: -100;
 
+    @media (max-width: 1200px){
+        min-height: 600px;
+        min-width: 400px;
+        display: flex;
+        flex-direction: rows:
+    }
+
 `
 const ModalImg = styled.img`
     width: 100%;
-    height: 100%
+    height: 100%;
     border-radius: 10px 0 0 10px;
     background: black;
     z-index: -100;
+    object-fit: cover;
+    
+    @media (max-width: 1200px){
+        display: none;
+    }
 
 `
 const ModalContent = styled.div`
     display: flex;
-    justify-conten: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    line-height: 1.8;
+    line-height: 1.3;
     color: #141414;
     z-index: -100;
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 0 auto;
+
+    h1 {
+       font-family: Dr Sugiyama;
+       font-size: 4rem;
+    }
 
     p {
-        margin-bottom: 1rem;
-
+        font-size: 1rem;
+        font-weight: 500;
     }
+
+    h2 {
+        margin: 1rem;
+        font-weight: 800;
+    }
+
+    h2 a: link, a:visited, a:hover, a:active {
+        color: black;
+        
+    }
+
+    @media (max-width: 1200px){
+        overflow: scroll;
+    }
+
+
 `
 
 const CloseModal = styled(MdClose)`
@@ -75,6 +117,10 @@ const CloseModal = styled(MdClose)`
     height: 32px;
     padding: 0;
     z-index: -100;
+    color: white;
+    @media (max-width: 1200px){
+        color: black;
+    }
 `
 
 
@@ -87,14 +133,41 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                     <ModalWrapper>
                         <ModalImg src={modal} alt="camera" />
                         <ModalContent>
-                            <h1>Are you ready?
-                            <p>Some stuff goes here.</p>
-                            </h1>
+                            <>
+
+                                <h1>
+                                    Project Details
+                             </h1>
+
+                                <h2>My special thanks to&nbsp;
+                            <a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" target="new">
+                                        Traversy Media
+                            </a>&nbsp;on who's&nbsp;
+                            <a href="https://www.youtube.com/watch?v=ontX4zfVqK8" target="new">
+                                        YouTube Tutorial
+                            </a> this is project is largely based upon.</h2>
+
+
+                                <p>My changes and additions include:&nbsp;
+                                the ability to switch between wildfire and volcanoe events,
+                                change of text and iconify markers depending on the category,
+                                change of map location based on change of category,
+                                styled components to handle the modal
+                                and addition of ReactJS framer motion for added animations.</p>
+
+                                <p>Known bugs include: the app is not truly mobile friendly. Some mobile browsers do not actively click on the
+                                markers to activate the event info modal. I am actively seeking a
+                                solution to this very odd problem.
+                                </p>
+                            </>
+
+
+
                         </ModalContent>
-                        <CloseModal aria-label="Close Modal" onClick={() => setShowInfo((prevState) => !prevState)} />
+                        <CloseModal aria-label="Close modal" onClick={() => setShowInfo((prevState) => !prevState)} />
                     </ModalWrapper>
                 </Background>
-            </Container>
+            </Container >
 
             {/* <div className="modal-container">
                 <div className="modal">
