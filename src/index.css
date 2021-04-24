@@ -1,5 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap');
 
 body {
   background-color: transparent;
@@ -174,7 +175,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
+  /* pointer-events:painted; */
   position: fixed;
   top: 0;
   left: 0;
@@ -189,21 +190,106 @@ body {
   flex-direction: row;
   justify-content: space-around;
   background-color: white;
-  width: 60vw;
-  height: 50vh;
-  max-width: 100%;
+  width: 95vw;
+  max-width: calc(100% - 600px);
+  height: 90vh;
+  max-height: calc(100% - 300px);
   text-align: center;
-  padding: 30px 40px;
+  padding: 10px 10px 10px 10px;
   border-radius: 5px;
-  margin: 60px auto;
+  margin: auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
   z-index: -100;
+  overflow: auto;
+
 }
 
 .modal-column  {
+  width: 100%;
+  background-color:none;
+  text-align: left;
+
 
 }
+
+.modal-column img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+.modal-column h1 {
+  font-family: Dr Sugiyama;
+  font-size: 40px;
+  color: rgba(12, 11, 11, 0.623);
+  text-align: center;
+  margin-left: 30px;
+}
+
+.modal-column h2, h3 {
+  margin-left: 30px;
+  
+}
+
+.modal-column ul, li {
+  list-style:lower-alpha;
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  
+}
+
+@media (max-width: 1200px) {
+  .modal{
+    max-width: calc(100% - 80px);
+    max-height: calc(100% - 80px);
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+   
+
+  .modal-column h1, h2, h3 {
+   align-items: center;
+   margin: 0;
+   justify-content: center;
+  }
+
+  .modal img {
+    justify-content: center;
+    max-width: calc(100vw - 100px);
+    max-height: calc(100vh - 500px);
+    object-fit: cover;
+    object-position: center;
+    text-align: center;
+  }
+}
+
+/* @media (max-width: 60em){
+  .modal{
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 95vw;
+    align-items: center;
+  }
+  .modal-column{
+    font-size: .7rem;
+    padding: 0;
+    margin: 0;
+  }
+  .modal img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+} */
 
 /* .backdrop{
   position: fixed;
