@@ -93,6 +93,7 @@ body {
 
 .footer-h3:hover{
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .map {
