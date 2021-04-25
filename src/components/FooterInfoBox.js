@@ -86,6 +86,7 @@ const ModalContent = styled.div`
        
        font-size: 4rem;
        text-decoration: bold;
+       margin-top: -10px;
     }
 
     p {
@@ -109,6 +110,7 @@ const ModalContent = styled.div`
         h1 {
             font-family: Raleway;
             font-size: 3rem;
+            margin-top: 0;
          }
      
          p {
