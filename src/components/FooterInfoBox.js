@@ -38,11 +38,12 @@ const ModalWrapper = styled.div`
     max-width: calc(100% - 600px);
     height: 90vh;
     max-height: calc(100% - 300px);
+    min-width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     background: white;
     color: black;
     display: grid;
-    grid-template-rows: repeat(1, 200px); 
+    grid-template-rows: repeat(1, 250px); 
     position: relative;
     z-index: -100;
     border-radius: 10px;
@@ -50,7 +51,7 @@ const ModalWrapper = styled.div`
 
     @media (max-width: 1200px){
         min-height: 600px;
-        min-width: 400px;
+        min-width: 380px;
         display: flex;
         flex-direction: rows:
     }
@@ -82,13 +83,16 @@ const ModalContent = styled.div`
     margin: 0 auto;
 
     h1 {
-       font-family: Dr Sugiyama;
+       
        font-size: 4rem;
+       text-decoration: bold;
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 500;
+        margin-left: 70px;
+        margin-right: 70px;
     }
 
     h2 {
@@ -102,6 +106,22 @@ const ModalContent = styled.div`
     }
 
     @media (max-width: 1200px){
+        h1 {
+            font-family: Raleway;
+            font-size: 3rem;
+         }
+     
+         p {
+             margin-left: 50px;
+             margin-right: 50px;
+             font-size: .9rem;
+             font-weight: 400;
+         }
+     
+         h2 {
+             margin: 1rem;
+             font-weight: 400;
+         }
         overflow: scroll;
     }
 
