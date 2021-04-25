@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { motion } from 'framer-motion'
 import modal from '../images/modal3.jpg'
 import {
@@ -14,6 +14,15 @@ import {
 
 export default function FooterInfoBox({ showInfo, setShowInfo }) {
 
+    useEffect(()=>{
+        
+        document.body.addEventListener('keydown', (e)=>{
+            if (e.key === 'Escape'){
+                setShowInfo(false)
+            }
+        })
+    },[])
+
     return (
         <>
             <Container>
@@ -22,7 +31,10 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                         <ModalImg src={modal} alt="camera" />
                         <ModalContent>
                             <>
-
+                            <motion.div 
+                                           initial={{ y: "-100vh"}}
+                                           animate={{y: "0"}}
+                                           transition={{ type: "spring", damping: 25 }}> 
                                 <h1>
                                     Project Details
                              </h1>
@@ -37,23 +49,25 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
 
 
                                 <p>My changes and additions include:&nbsp;
+                                
+                                the ability to switch between wildfire and volcanoe events
                                 using useState() and useEffect(),
-                                the ability to switch between wildfire and volcanoe events,
                                 change of text and iconify markers depending on the category,
                                 change of map location based on change of category,
                                 styled components to handle the modal
                                 and addition of ReactJS framer motion for added animations.</p>
 
-                                <p>Known bugs: some mobile browsers do not click on the
+                                <p>Known bugs: some mobile browsers do not click on the icon
                                 markers to activate the event info modal. I am actively seeking a
                                 solution to this very odd problem.
                                 </p>
+                            </motion.div>
                             </>
 
 
 
                         </ModalContent>
-                        <CloseModal aria-label="Close modal" onClick={() => setShowInfo((prevState) => !prevState)} />
+                        <CloseModal aria-label="Close modal" onClick={() => setShowInfo(false)} />
                     </ModalWrapper>
                 </Background>
             </Container >

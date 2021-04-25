@@ -168,6 +168,13 @@ body {
   }
 }
 
+/* .location-marker {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+  z-index: -100;
+} */
+
 /* modal styles */
 
 /* .modal-container {
