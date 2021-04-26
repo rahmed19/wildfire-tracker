@@ -48,7 +48,9 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                             </a>&nbsp;on who's&nbsp;
                             <a href="https://www.youtube.com/watch?v=ontX4zfVqK8" target="new">
                                         YouTube Tutorial
-                            </a> this is project is largely based upon.</h2>
+                            </a> this is project is largely based upon. <br />Find the NASA open API source&nbsp; 
+                            <a href="https://eonet.sci.gsfc.nasa.gov/api/v3/events" target="new">
+                            here.</a> </h2>
 
 
                                 <p>My changes and additions include:&nbsp;

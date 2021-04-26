@@ -27,7 +27,7 @@ export default function Header({ setEventCategory, eventCategory }) {
                         </h1>
                     </div>
                     <div className="column">
-                        <h1>(Powered by ReactJS & NASA open API)</h1>
+                        <h1>Powered by ReactJS & NASA open API</h1>
                     </div>
                 </div>
             </div>
