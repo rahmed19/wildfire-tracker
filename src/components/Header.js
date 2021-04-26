@@ -10,7 +10,10 @@ export default function Header({ setEventCategory, eventCategory }) {
     }
 
     return (
-        <header className="header">
+        <motion.header className="header"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+        >
             <div className="wrapper">
                 <div className="flex-container">
                     <div className="column">
@@ -28,6 +31,6 @@ export default function Header({ setEventCategory, eventCategory }) {
                     </div>
                 </div>
             </div>
-        </header>
+        </motion.header>
     )
 }

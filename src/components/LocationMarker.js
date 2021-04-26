@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Icon } from '@iconify/react'
 import locationIconWildfire from '@iconify/icons-mdi/fire-alert'
 import locationIconVolcano from '@iconify/icons-mdi/mountain'
