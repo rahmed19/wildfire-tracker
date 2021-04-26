@@ -16,11 +16,14 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
 
     useEffect(()=>{
         
-        document.body.addEventListener('keydown', (e)=>{
+        const event = document.body.addEventListener('keydown', (e)=>{
             if (e.key === 'Escape'){
                 setShowInfo(false)
             }
         })
+
+        return event
+
     },[])
 
     return (
@@ -34,12 +37,12 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                             <motion.div 
                                            initial={{ y: "-100vh"}}
                                            animate={{y: "0"}}
-                                           transition={{ type: "spring", damping: 25 }}> 
+                                           transition={{ type: "spring", damping: 18 }}> 
                                 <h1>
                                     Project Details
                              </h1>
 
-                                <h2>My special thanks to&nbsp;
+                                <h2>A special thanks to&nbsp;
                             <a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" target="new">
                                         Traversy Media
                             </a>&nbsp;on who's&nbsp;
@@ -61,10 +64,12 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                                 markers to activate the event info modal. I am actively seeking a
                                 solution to this very odd problem.
                                 </p>
+
+                                <p> More about me and my work @ <a href="https://linktr.ee/rahmed19" target="new">Link Tree</a> </p>
                             </motion.div>
                             </>
 
-
+                            
 
                         </ModalContent>
                         <CloseModal aria-label="Close modal" onClick={() => setShowInfo(false)} />
