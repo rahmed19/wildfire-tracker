@@ -53,7 +53,7 @@ export default function Map({ eventData, eventCategory }) {
                 defaultCenter={{ lat: 43.246292, lng: -97.1384 }}
                 center={centerProperty}
                 defaultZoom={4}
-                onClick={() => setLocationInfo(null)}
+            // onClick={() => setLocationInfo(null)}
             >
                 {markers}
 
