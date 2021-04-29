@@ -1,12 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import {
+    CloseModal
+
+} from './FooterInfoBoxStyles'
+
 export default function LocationInfoBox({ info, setLocationInfo }) {
 
     return (
         <motion.div className="location-info" onClick={() => setLocationInfo(null)}
             animate={{ x: -40 }}
         >
+            <CloseModal />
             <motion.div animate={{ opacity: 1 }}>
                 <h2>{info.event.charAt(0).toUpperCase() + info.event.slice(1)} Location Info</h2>
                 <ul>
