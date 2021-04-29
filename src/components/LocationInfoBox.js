@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import {
-    CloseModal
+    CloseModalMarker
 
 } from './FooterInfoBoxStyles'
 
@@ -12,7 +12,7 @@ export default function LocationInfoBox({ info, setLocationInfo }) {
         <motion.div className="location-info" onClick={() => setLocationInfo(null)}
             animate={{ x: -40 }}
         >
-            <CloseModal />
+            <CloseModalMarker color={'white'} onClick={() => setLocationInfo(null)} />
             <motion.div animate={{ opacity: 1 }}>
                 <h2>{info.event.charAt(0).toUpperCase() + info.event.slice(1)} Location Info</h2>
                 <ul>

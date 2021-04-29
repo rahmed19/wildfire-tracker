@@ -7,7 +7,7 @@ import {
     ModalWrapper,
     ModalImg,
     ModalContent,
-    CloseModal
+    CloseModalFooter
 
 } from './FooterInfoBoxStyles'
 
@@ -55,11 +55,12 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
 
                                 <p>My changes and additions include:&nbsp;
                                 
-                                the ability to switch between wildfire and volcanoe events
+                                the ability to switch between wildfire and volcano events
                                 using useState() and useEffect(),
                                 change of text and iconify markers depending on the category,
                                 change of map location based on change of category,
-                                styled components to handle the modal
+                                styled components to handle the modal, responsive CSS,
+                                removing the map click handler so as to make the site mobile friendly
                                 and addition of ReactJS framer motion for added animations.</p>
 
                                 <p> More about me and my work @ <a href="https://linktr.ee/rahmed19" target="new">Link Tree</a> </p>
@@ -69,8 +70,11 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                             
 
                         </ModalContent>
-                        <CloseModal aria-label="Close modal" onClick={() => setShowInfo(false)} />
+                      
+                            <CloseModalFooter color={'footer'} aria-label="Close modal" onClick={() => setShowInfo(false)} />
+                        
                     </ModalWrapper>
+                    
                 </Background>
             </Container >
 

@@ -126,7 +126,7 @@ export const ModalContent = styled.div`
 
 `
 
-export const CloseModal = styled(MdClose)`
+export const CloseModalFooter = styled(MdClose)`
     cursor: pointer;
     position: absolute;
     top: 20px;
@@ -139,4 +139,16 @@ export const CloseModal = styled(MdClose)`
     @media (max-width: 1200px){
         color: black;
     }
+`
+
+export const CloseModalMarker = styled(MdClose)`
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    z-index: -100;
+    color: white;
 `

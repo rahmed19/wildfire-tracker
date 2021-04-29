@@ -158,12 +158,12 @@ body {
 @media(max-width: 850px){
   .location-info{
     width: 250px;
-    height: 100px;
+    min-height: 200px;
     position: fixed;
     top: 20%;
     left: 30%;
     transform: (-50%, -50%);
-    font-size: .8rem;
+    font-size: 1rem;
     
   }
 }
