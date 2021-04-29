@@ -62,11 +62,6 @@ export default function FooterInfoBox({ showInfo, setShowInfo }) {
                                 styled components to handle the modal
                                 and addition of ReactJS framer motion for added animations.</p>
 
-                                <p>Known bugs: some mobile browsers do not click on the icon
-                                markers to activate the event info modal. I am actively seeking a
-                                solution to this very odd problem.
-                                </p>
-
                                 <p> More about me and my work @ <a href="https://linktr.ee/rahmed19" target="new">Link Tree</a> </p>
                             </motion.div>
                             </>
