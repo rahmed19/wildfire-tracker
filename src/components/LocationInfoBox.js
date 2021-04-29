@@ -18,8 +18,8 @@ export default function LocationInfoBox({ info, setLocationInfo }) {
                 <ul>
                     <li>ID: <strong>{info.id}</strong></li>
                     <li>TITLE: <strong>{info.title}</strong></li>
-                    <li>LATITUDE: <strong>{info.lat}</strong></li>
-                    <li>LONGTITUDE: <strong>{info.lng}</strong></li>
+                    <li>LATITUDE: <strong>{info.lat.toFixed(3)}</strong></li>
+                    <li>LONGTITUDE: <strong>{info.lng.toFixed(3)}</strong></li>
                 </ul>
             </motion.div>
         </motion.div>
