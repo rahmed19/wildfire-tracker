@@ -26,6 +26,7 @@ export default function Map({ eventData, eventCategory }) {
 
                 return <LocationMarker
                     eventCategory={eventCategory}
+                    key={ev.id}
                     lat={ev.geometry[0].coordinates[1]}
                     lng={ev.geometry[0].coordinates[0]}
                     onClick={() =>
